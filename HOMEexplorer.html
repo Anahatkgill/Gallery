@@ -8,83 +8,64 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <style>
-
-        body{
-            font-size: large;
-            margin: 30px;
-            padding: 20px;
+        body {
+            font-size: medium;
+            margin: 0;
+            padding: 0;
         }
-        h1{
-            margin-left: auto;
-            margin: 30px;
+
+        h1 {
             color: #1B512D;
             text-align: center;
             background-color: #85FFBD;
             background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
-            padding: 10px 55px;  
-
+            padding: 10px;
         }
 
-        #first-para{
+        #first-para {
             text-align: center;
-            margin: 30px;
-            padding: 30px;
+            padding: 20px;
         }
 
-        #sakura{
-            float: left;
-            width: 30%;
-            margin: 20px;
+        #sakura {
+            width: 100%;
             border-radius: 5%;
             transition: transform 0.5s;
+            max-width: 300px;
+            display: block;
+            margin: auto;
         }
 
-        #sakura:hover{
+        #sakura:hover {
             transform: translateY(-5px);
         }
 
-        #notsakura{
-            float: right;
-            width: 30%;
-            margin: 20px;
-           border-radius: 10%;
-           padding: 10px;
-           transition: transform 0.5s;
-        }
-
-        #notsakura:hover{
-            transform: translateY(-5px);
-        }
-
-        #second-para{
-            text-align: center;
-            padding: 30px;
-            margin: 30px;
-        }
-
-        #box{
-            width: 100%;
-            height: 20px;
+        #box {
+            height: 10px;
             background-color: #1B512D;
         }
-        
+
+        @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            #sakura {
+                max-width: 80%;
+            }
+        }
     </style>
 </head>
-<div id="box">
-
-</div>
 <body>
+    <div id="box"></div>
+
     <h1><span>Handicraft</span></h1>
-    
+
     <div id="first-para">
-        <img id="sakura" src="found.jpeg">
-        <p>Welcome to my canvas of dreams, where every blank canvas, fabric or paper is a playground for imagination and creativity. For me, each piece starts as a whisper of possibility, waiting to be brought to life. I see shapes, hues, designs and patterns waiting to dance across the fabric. With each passing day, as the creation evolves my excitement grows, infusing each piece with positivity, joy and immense satisfaction. It's a journey that keeps the child within me alive, invigorates and rejuvenates me with energy, vigor and a sense of purpose.
-            Step into my world of <br>colors and witness the transformation as fabrics and canvases become vibrant reflections of my passion and vision.<br> From intricate patterns to bold strokes of expression, each piece tells a story, inviting you to immerse yourself in its beauty and energy.
-            Welcome to my gallery, where every painting is a testament to the endless possibilities of the human spirit.</p>
+        <img id="sakura" src="found.jpeg" alt="Found Image">
+        <p>Welcome to my canvas of dreams, where every blank canvas, fabric, or paper is a playground for imagination and creativity. For me, each piece starts as a whisper of possibility, waiting to be brought to life. I see shapes, hues, designs, and patterns waiting to dance across the fabric. With each passing day, as the creation evolves, my excitement grows, infusing each piece with positivity, joy, and immense satisfaction. It's a journey that keeps the child within me alive, invigorates, and rejuvenates me with energy, vigor, and a sense of purpose. Step into my world of colors and witness the transformation as fabrics and canvases become vibrant reflections of my passion and vision. From intricate patterns to bold strokes of expression, each piece tells a story, inviting you to immerse yourself in its beauty and energy. Welcome to my gallery, where every painting is a testament to the endless possibilities of the human spirit.</p>
     </div>
-   
+
+    <div id="box"></div>
 </body>
-<div id="box">
-</div>
-</div>
 </html>

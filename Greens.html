@@ -3,195 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elegant Greens</title>
-    <link rel="stylesheet" href="shop.css">
+    <title>Hydrangeas</title>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     
     <style>
-
-        #logo{
-            width: 20%;
+        body {
+            font-size: medium;
+            margin: 0;
+            padding: 0;
         }
 
-        .carousel{
-            margin-top: 8%;
-            margin-bottom: 8%;
-
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: #ffffff;
         }
 
-        .carousel-cell{
+        .navbar-header {
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-toggle {
+            font-size: 28px;
+            color: #1b3324;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: none;
+        }
+
+        .navbar-menu {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .navbar-menu li {
+            margin-right: 20px;
+        }
+
+        .navbar-menu li a {
+            color: #1b3324;
+            text-decoration: none;
+        }
+
+        .navbar-menu li:hover {
+            background-color: #7c9c87;
+            padding: 10px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar-menu {
+                display: none; 
+                flex-direction: column;
+                width: 100%;
+                align-items: flex-start;
+                background-color: #ffffff;
+                padding: 0;
+                margin: 0;
+            }
+
+            .navbar-toggle {
+                display: block; 
+            }
+
+            .navbar-menu.show {
+                display: flex;
+            }
+            
+            .navbar-menu li {
+                padding: 10px;
+                margin: 0;
+                width: 100%;
+                text-align: left;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: #1B512D;
+        }
+
+        p {
+            color: #1B512D;
+        }
+
+        #logo {
+            width: 150px;
+            height: auto;
+        }
+
+        .carousel {
+            margin-top: 4%;
+            margin-bottom: 4%;
+        }
+
+        .carousel-cell {
             width: 60%;
             height: 500px;
             margin-right: 10px;
             border-radius: 15px;
             background-size: cover;
             background-position: center center;
-
         }
 
-        .carousel-cell:before{
+        .carousel-cell:before {
             display: block;
-            content:'';
+            content: '';
         }
 
-
-        body{
-            font-size: medium;
-            margin: 30px;
-            padding: 20px;
-
-        }
-
-        .navbar{
-    display: flex;
-    align-items: center;
-    padding: 20;
-}
-
-nav{
-    flex: 1;
-    text-align: right;
-}
-
-nav ul{
-    display: inline-block;
-    list-style-type: none;
-}
-
-nav ul li:hover{
-    background-color: #7c9c87;
-    padding: 20px;
-}
-
-nav ul li{
-    display: inline-block;
-    margin-right: 20px;
-}
-
-a{
-    text-decoration: none;
-    color: #1B512D;
-}
-
-p{
-    color: #1B512D;
-}
-
-        img{
+        img {
             width: 60%;
-            margin: 20px;
-            padding: 20px;
+            margin: 10px;
+            padding: 10px;
             float: left;
-
         }
 
-        h3{
+        h3 {
             text-align: center;
             color: #1B512D;
         }
 
-        h4{
+        h4 {
             text-align: center;
             color: #6d977c;
         }
 
-        h3, h4{
-            margin: auto;
+        h3, h4 {
+            margin: 10px 0;
         }
 
-        .btn{
-    display: inline-block;
-    background-color: #1B512D;
-    color: whitesmoke;
-    padding: 8px 30px;
-    margin: 30px 30px;
-    border-radius: 30px;
-    transition: background 0.5s;
-    position: relative;
-    left: 40%;
- }
+        .btn {
+            display: inline-block;
+            background-color: #1B512D;
+            color: whitesmoke;
+            padding: 8px 30px;
+            margin: 20px auto;
+            border-radius: 30px;
+            transition: background 0.5s;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
- .btn:hover{
-    background: #09110c;
- }
+        .btn:hover {
+            background: #09110c;
+        }
 
- #footer{
-    padding: 20px;
-    text-align: center;
-    float: left;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0%;
+        #footer {
+            padding: 20px;
+            text-align: center;
+            float: left;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            right: 0%;
+        }
 
- }
- @media only screen and (max-width: 600px) {
-    #logo {
-        width: 50%; 
-    }
+        @media only screen and (max-width: 350px) {
+            #logo {
+                width: 50%; 
+                height: auto;
+            }
 
-    .carousel-cell {
-        width: 100%; 
-        height: auto;
-        margin-right: 0; 
-        border-radius: 0;
-    }
+            .carousel-cell {
+                width: 100%; 
+                height: auto;
+                margin-right: 0; 
+                border-radius: 0;
+            }
 
-    img {
-        width: 100%; 
-        margin: 0; 
-        padding: 0;
-        float: none; 
-    }
+            img {
+                width: 100%; 
+                margin: 0; 
+                padding: 0;
+                float: none; 
+            }
 
-    h3, h4 {
-        text-align: center;
-    }
+            h3, h4 {
+                text-align: center;
+            }
 
-    .btn {
-        display: block; 
-        margin: 20px auto; 
-    }
+            .btn {
+                display: block; 
+                margin: 20px auto; 
+                left: 0;
+                transform: none;
+            }
 
-    #footer {
-        position: static;
-        float: none; 
-        left: 0;
-        right: 0; 
-    }
-}
+            #footer {
+                position: static;
+                float: none; 
+                left: 0;
+                right: 0; 
+            }
+        }
     </style>
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 </head>
 <body>
 
     <div class="navbar">
-        <img src="logo4.png" id="logo">
-       
+        <div class="navbar-header">
+            <img src="logo4.png" id="logo" alt="Logo">
+            <button class="navbar-toggle" id="navbar-toggle">☰</button>
+        </div>
         <nav>
-            <ul id="Menuitems">
-                
-                <li><a href="home.html" >Home</a></li>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="HOMEexplorer.html" target="_blank">About</a></li>
                 <li><a href="contact.html" target="_blank">Contact</a></li>
             </ul>
         </nav>
-        <i style='font-size:24px' class="menu-items"></i>
     </div>
     <h2 class="title"></h2>
     <div id="main">
-       <div class="carousel" data-flickity='{"autoPlay": true}'>
-        <div class="carousel-cell" style="background-image: url(Green1.jpeg);"></div>
-        <div class="carousel-cell" style="background-image: url(Green2.jpeg);"></div>
-        <div class="carousel-cell" style="background-image: url(Green3.jpeg);"></div>
-        <div class="carousel-cell" style="background-image: url(Green4.jpeg);"></div>
-       </div>
-        
-        <h3>Elegant Greens</h3>
-        <h4>Add a touch of elegance to your table with our hand-painted table runner, featuring golden and green leaf motifs. This stunning piece brings a subtle yet sophisticated charm to your home.</h4>
-    </div>
+        <div class="carousel" data-flickity='{"autoPlay": true}'>
+         <div class="carousel-cell" style="background-image: url(Green1.jpeg);"></div>
+         <div class="carousel-cell" style="background-image: url(Green2.jpeg);"></div>
+         <div class="carousel-cell" style="background-image: url(Green3.jpeg);"></div>
+         <div class="carousel-cell" style="background-image: url(Green4.jpeg);"></div>
+        </div>
+         
+         <h3>Elegant Greens</h3>
+         <h4>Add a touch of elegance to your table with our hand-painted table runner, featuring golden and green leaf motifs. This stunning piece brings a subtle yet sophisticated charm to your home.</h4>
+     </div>
 
     <div>
         <a href="contact.html" target="_blank" class="btn">Contact Us</a>
@@ -199,8 +240,16 @@ p{
     <br>
     <br>
     <h2 class="title"></h2>
-
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script>
+        document.getElementById('navbar-toggle').addEventListener('click', function () {
+            var menu = document.getElementById('navbar-menu');
+            if (menu.classList.contains('show')) {
+                menu.classList.remove('show');
+            } else {
+                menu.classList.add('show');
+            }
+        });
+    </script>
 </body>
-
 </html>
